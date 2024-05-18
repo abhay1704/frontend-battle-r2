@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assests/material-theme/css/light.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="stockInfoStyle.css">
+    <link rel="stylesheet" href="lettersStyle.css">
+    <title>StockInfo </title>
+</head>
+<body>
+        <section id="pdf-letters">
+      <h1>Letters</h1>
+      <div class="pdf-container">
+        <div class="pdf-title" onclick="togglePdf('pdf1')">
+          <h2><span>Title 1</span> <span id="pdf1-icon">+</span></h2>
+        </div>
+        <embed
+          id="pdf1"
+          class="pdf-viewer hidden"
+          src="https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.berkshirehathaway.com/donate/pabltr.pdf"
+          type="application/pdf"
+        />
+
+        <div class="pdf-title" onclick="togglePdf('pdf2')">
+          <h2><span>Title 2</span> <span id="pdf2-icon">+</span></h2>
+        </div>
+        <embed
+          id="pdf2"
+          class="pdf-viewer hidden"
+          src="https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.berkshirehathaway.com/donate/hgbltr.pdf"
+          type="application/pdf"
+        />
+      </div>
+    </section>
+
+    <section id="astockInfo">
+        
+    </section>
+
+    <script>
+      function togglePdf(id) {
+        var pdf = document.getElementById(id);
+        var icon = document.getElementById(id + "-icon");
+
+        if (pdf.classList.contains("hidden")) {
+          pdf.classList.remove("hidden");
+          icon.innerText = "-";
+        } else {
+          pdf.classList.add("hidden");
+          icon.innerText = "+";
+        }
+      }
+</body>
+</html>
