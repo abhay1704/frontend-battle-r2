@@ -1,42 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assests/material-theme/css/light.css">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="stockInfoStyle.css">
-    <link rel="stylesheet" href="lettersStyle.css">
-    <title>StockInfo </title>
-</head>
-<body>
-        <section id="pdf-letters">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assests/material-theme/css/light.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="stockInfoStyle.css" />
+    <link rel="stylesheet" href="lettersStyle.css" />
+    <title>StockInfo</title>
+    <style>
+        section{
+            padding: 2rem;
+        }
+        header{
+            background-color: var(--md-sys-color-primary);
+            color: var(--md-sys-color-on-primary);
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        </style>
+  
+
+  </head>
+  <body>
+     <header>
+      <h1 id="logo">Berkshire-Hathaway</h1>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/#explore">Explore</a></li>
+          <li><a href="/#sustainability">Sustainability</a></li>
+          <li><a href="/#about">About</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section id="pdf-letters">
       <h1>Letters</h1>
       <div class="pdf-container">
         <div class="pdf-title" onclick="togglePdf('pdf1')">
-          <h2><span>Title 1</span> <span id="pdf1-icon">+</span></h2>
+          <h2><span>Comparative Rights and Relative Prices of Class A and B Stock</span> <span id="pdf1-icon">+</span></h2>
         </div>
         <embed
           id="pdf1"
           class="pdf-viewer hidden"
-          src="https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.berkshirehathaway.com/donate/pabltr.pdf"
+          src="https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.berkshirehathaway.com/brkshareholderinfo/compab.pdf"
           type="application/pdf"
         />
 
         <div class="pdf-title" onclick="togglePdf('pdf2')">
-          <h2><span>Title 2</span> <span id="pdf2-icon">+</span></h2>
+          <h2><span>Common stock and stock transfer agent information</span> <span id="pdf2-icon">+</span></h2>
         </div>
         <embed
           id="pdf2"
           class="pdf-viewer hidden"
-          src="https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.berkshirehathaway.com/donate/hgbltr.pdf"
+          src="https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.berkshirehathaway.com/brkshareholderinfo/transferagentinfo.pdf"
           type="application/pdf"
         />
       </div>
     </section>
 
     <section id="astockInfo">
-        
+        <h1>Stock Information - BRK - A class</h1>
+      <img src="assests/stockChart.png" ></img>
     </section>
 
     <script>
@@ -52,5 +79,6 @@
           icon.innerText = "+";
         }
       }
-</body>
+    </script>
+  </body>
 </html>

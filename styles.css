@@ -60,6 +60,39 @@ a:active {
   text-decoration: underline;
   font-size: 0.8rem;
   letter-spacing: 1.2px;
+  width: 100%;
+  height: 100%;
+}
+
+p,
+.content,
+h2,
+h3 {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 1.2px;
+}
+
+h1 {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+#logo {
+  font-family: "Radio Canada Big", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    display: none;
+  }
 }
 #home {
   text-align: center;
@@ -220,7 +253,10 @@ h3 {
   color: var(--md-sys-color-on-primary);
   border: none;
 
-  button {
+  button,
+  a,
+  a:visited,
+  a:active {
     background-color: var(--md-sys-color-on-primary);
     color: var(--md-sys-color-primary);
   }
@@ -230,7 +266,10 @@ h3 {
   background-color: var(--md-sys-color-secondary);
   color: var(--md-sys-color-on-secondary);
 
-  button {
+  button,
+  a,
+  a:visited,
+  a:active {
     background-color: var(--md-sys-color-on-secondary);
     color: var(--md-sys-color-secondary);
   }
@@ -240,7 +279,10 @@ h3 {
   background-color: var(--md-sys-color-tertiary);
   color: var(--md-sys-color-on-tertiary);
 
-  button {
+  button,
+  a,
+  a:visited,
+  a:active {
     background-color: var(--md-sys-color-on-tertiary);
     color: var(--md-sys-color-tertiary);
   }
@@ -251,7 +293,10 @@ h3 {
   color: var(--md-sys-color-on-surface);
   border: 1px solid var(--md-sys-color-outline);
 
-  button {
+  button,
+  a,
+  a:visited,
+  a:active {
     background-color: var(--md-sys-color-on-surface);
     color: var(--md-sys-color-surface);
   }
@@ -265,6 +310,13 @@ h3 {
   cursor: pointer;
   text-align: left;
   margin-top: 1.3rem;
+}
+
+a,
+a:active,
+a:visited {
+  color: var(--md-sys-color-primary);
+  text-decoration: none;
 }
 
 /* -------------------------------------------- */
@@ -281,7 +333,7 @@ h3 {
   max-height: min-content;
 }
 
-#sustainability a{
+#sustainability a {
   color: var(--md-sys-color-on-secondary);
 }
 
@@ -327,16 +379,16 @@ h3 {
   margin: auto;
   display: flex;
   width: 80%;
-  gap: 2rem 2rem;
+  gap: 3rem 3rem;
   flex-wrap: wrap;
   justify-content: center;
 }
 
 .news-card {
   display: inline-flex;
-  width: 40%;
+  width: 45%;
   min-width: 400px;
-  gap: 10px;
+  gap: 30px;
   padding: 50px 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -433,4 +485,112 @@ footer {
   background-color: #000;
   color: #fff;
   padding: 20px 0;
+}
+
+/* Mobile Friendly */
+
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 0.8rem;
+  }
+
+  header {
+    padding: 10px;
+  }
+
+  header h1 {
+    font-size: 1.2rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  nav a {
+    font-size: 1rem;
+  }
+
+  section {
+    padding: 4rem 1.5rem;
+  }
+
+  #home {
+    padding: 5px 0 5px 15px;
+  }
+
+  #home h1 {
+    font-size: 2rem;
+  }
+
+  #home .quote {
+    width: 100%;
+    padding-left: 7.5px;
+  }
+
+  #home img {
+    width: 100%;
+    height: 90%;
+  }
+
+  .boxes {
+    grid-template-columns: auto;
+    width: 90%;
+  }
+
+  .box {
+    width: 100%;
+    height: auto;
+    padding: 25px 10px;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  .sustainability {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .sustainability .img,
+  .sustainability .content {
+    width: 100%;
+  }
+
+  .news {
+    flex-direction: column;
+    width: 90%;
+  }
+
+  .news-card {
+    flex-direction: column;
+    width: 100%;
+    min-width: 200px;
+    gap: 15px;
+    padding: 25px 10px;
+  }
+
+  .news-card .content,
+  .news-card .img {
+    width: 100%;
+  }
+
+  .about {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .about .img,
+  .about .content {
+    width: 100%;
+  }
+
+  footer {
+    padding: 10px 0;
+  }
 }
